@@ -1,0 +1,585 @@
+/* --- General Layout --- */
+body {
+  background: linear-gradient(135deg, #bfdfff 0%, #e6f0ff 100%);
+  font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('cc.jpg');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+}
+/* --- Title --- */
+.main-title {
+  font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 48px;
+  color: #222;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 12px;
+  display: inline-block;
+  padding: 8px 30px;
+  border: 3px solid #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- Top Sections (Add Clothes + OOTD) --- */
+.top-sections {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+/* --- Add Clothes Form --- */
+.main {
+  background-color: #fffbe6;
+  margin-top: 10px;
+  max-width: 260px;
+  border-radius: 20px;
+  padding: 20px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 2px solid #222;
+}
+
+.main h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.main label {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.main input[type="text"],
+.main input[type="file"],
+.main select {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  font-size: 1em;
+}
+
+.main input[type="submit"] {
+  width: 100%;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- OOTD Section --- */
+.ootd-section {
+  max-width: 260px;
+  min-width: 220px;
+  margin-top: 10px;
+  padding: 20px 18px;
+  background: #fffbe6;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 2px solid #222;
+}
+
+.ootd-section h2 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.ootd-section label {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.ootd-section input[type="date"],
+.ootd-section select {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  font-size: 1em;
+}
+
+.ootd-section button {
+  width: 100%;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ootd-section .ootd-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.ootd-section .closet-item {
+  width: 100px;      /* was 80px */
+  height: 140px;     /* was 110px */
+  border: 2px solid #222;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 6px 12px 6px; /* slightly more padding */
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.ootd-section .closet-item img {
+  width: 64px;      /* was 48px */
+  height: 64px;     /* was 48px */
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.ootd-section .item-info {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.ootd-section .closet-item form {
+  width: 100%;
+  margin: 0;
+}
+
+.ootd-section .closet-item button {
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 1px 0 1px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  box-shadow: none;
+  transition: background 0.2s;
+}
+
+.ootd-section .closet-item button:hover {
+  background: #c00;
+}
+
+/* --- Utility Bar (Total Price + Search) --- */
+.utility-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.total-price {
+  border: 2px solid #222;
+  border-radius: 24px;
+  padding: 10px 30px;
+  background: #ffe6e6;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.search-bar {
+  border: 2px solid #222;
+  border-radius: 24px;
+  padding: 10px 30px;
+  background: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 0;
+  box-shadow: none;
+  width: 600px;
+  outline: none;
+}
+
+/* --- Closet Grid --- */
+.container {
+  flex: 1;
+  margin-top: 0;
+}
+
+.closet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.closet-item {
+  border: 3px solid #222;
+  border-radius: 20px;
+  width: 220px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.closet-item img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.item-info {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+  color: #222;
+}
+
+/* --- Edit Clothes Page --- */
+
+.edit_clothes {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 2px solid #222;
+  padding: 32px 32px 24px 32px;
+  min-width: 200px;
+  max-width: 220px;
+  
+}
+
+.edit_clothes h2 {
+  font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2em;
+  margin-bottom: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.edit_clothes label {
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 8px;
+  display: block;
+}
+
+.edit_clothes input[type="text"],
+.edit_clothes input[type="file"],
+.edit_clothes select {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.edit_clothes img {
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.edit_clothes button,
+.edit_clothes .btn {
+  width: 48%;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 4px 1%;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.edit_clothes .btn-secondary {
+  background: #888;
+  color: #fff;
+  
+}
+
+.edit_clothes button:hover,
+.edit_clothes .btn-success:hover {
+  background: #1a7f37;
+}
+
+.edit_clothes .btn-secondary:hover {
+  background: #555;
+}
+
+/* --- Button Styles --- */
+.btn, .btn-success, .btn-danger, .btn-secondary {
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 4px 0;
+  transition: background 0.2s;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+.edit_clothes .btn-success,
+.btn-success {
+  background: #1a7f37 !important; /* Green */
+  color: #fff;
+}
+
+.edit_clothes .btn-danger,
+.btn-danger {
+  background: #c00 !important; /* Red */
+  color: #fff;
+}
+
+.edit_clothes .btn-secondary,
+.btn-secondary {
+  background: #888 !important; /* Gray */
+  color: #fff;
+}
+.btn-success {
+  background: #1a7f37;
+}
+
+.btn-danger {
+  background: #c00;
+}
+
+.btn-secondary {
+  background: #888;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #146c2b;
+}
+
+.btn-danger:hover {
+  background: #a00;
+}
+
+.btn-secondary:hover {
+  background: #555;
+}
+
+/* --- Edit Wrapper --- */
+.edit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  background: #f3ede6;
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+.edit-image-col {
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 32px;
+  padding: 48px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 480px;
+  min-height: 480px;
+  box-sizing: border-box;
+}
+
+.edit-image {
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+  display: block;
+}
+
+.edit_clothes {
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: 2px solid #222;
+  padding: 48px 48px 36px 48px;
+  min-width: 520px;
+  max-width: 600px;
+}
+
+.edit_clothes h2 {
+  font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 3.2em;
+  margin-bottom: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.edit_clothes label {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 14px;
+  display: block;
+}
+
+.edit_clothes input[type="text"],
+.edit_clothes input[type="file"],
+.edit_clothes select {
+  width: 100%;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  padding: 12px 16px;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+
+.edit_clothes button,
+.edit_clothes .btn {
+  font-size: 1.3em;
+  padding: 14px 0;
+}
+
+.edit_clothes .btn-secondary {
+  font-size: 1.2em;
+  padding: 14px 0;
+}
+
+/* Responsive: still works for small screens */
+@media (max-width: 1200px) {
+  .edit-wrapper {
+    gap: 30px;
+    padding: 30px 0;
+  }
+  .edit-image-col, .edit_clothes {
+    min-width: 0;
+    max-width: 98vw;
+    width: 98vw;
+    padding: 24px 2vw;
+  }
+  .edit-image {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Circle X Remove Button */
+.remove-x-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff5a5a 70%, #c00 100%);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+  padding: 0;
+}
+.remove-x-btn::before, .remove-x-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.remove-x-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.remove-x-btn:hover {
+  background: radial-gradient(circle at 30% 30%, #ff2222 70%, #900 100%);
+}
+
+/* --- Type Filter Dropdown --- */
+.type-filter {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1.5px solid #222;
+  border-radius: 16px;
+  padding: 10px 38px 10px 16px;
+  font-size: 1.1em;
+  background: #fff url("data:image/svg+xml;utf8,<svg fill='black' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center/18px 18px;
+  color: #111;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 340px;
+  transition: border 0.2s;
+}
+
+.type-filter:focus {
+  border: 1.5px solid #888;
+}
+
+/* Optional: Remove default arrow in IE */
+select.type-filter::-ms-expand {
+  display: none;
+}
+
+/* --- Filter Button --- */
+.filter-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-size: 16px;
+  background: #222;
+  color: #fff;
+  margin-left: 5px;
+  transition: background 0.2s, color 0.2s;
+  height: 42px;
+  box-sizing: border-box;
+}
+
+.filter-btn:hover, .filter-btn:focus {
+  background: #444;
+  color: #fff;
+  outline: none;
+}
